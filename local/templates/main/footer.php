@@ -11,9 +11,15 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             <div class="row">
                 <div class="width-28">
                     <a href="/" class="mob-hidden footer__logo" title="">
-                        <img src="images/i/pic-logo.png" alt="">
+                        <? $APPLICATION->IncludeComponent("bitrix:main.include", "", [
+                            "AREA_FILE_SHOW" => "file",
+                            "PATH"           => SITE_TEMPLATE_PATH . "/includes/header_logo.php",
+                        ]); ?>
                     </a>
-                    <p>Компания ОДО «Тралс» , основанная в г. Минске в 1995 году является одним из крупнейших поставщиков элементов питания, герметичных аккумуляторов, стационарных аккумуляторов, зарядных устройств и светотехнической продукции в Республику Беларусь. </p>
+                    <? $APPLICATION->IncludeComponent("bitrix:main.include", "", [
+                        "AREA_FILE_SHOW" => "file",
+                        "PATH"           => SITE_TEMPLATE_PATH . "/includes/footer/footer_about.php",
+                    ]); ?>
                 </div>
                 <div class="width-72">
                     <nav class="footer__nav">
@@ -39,17 +45,22 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                     </nav>
                     <ul class="footer__contact flex">
                         <li class="address">
-                            <div class="title">Адрес:</div>
-                            <p>Pеспублика Беларусь, 220113, Минск, <br>Логойский тракт, д.15, к.4</p>
-                            <a href="#fb-map" class="address__map js-open-modal" title=""><span>Посмотреть на карте</span></a>
+                            <? $APPLICATION->IncludeComponent("bitrix:main.include", "", [
+                                "AREA_FILE_SHOW" => "file",
+                                "PATH"           => SITE_TEMPLATE_PATH . "/includes/footer/footer_address.php",
+                            ]); ?>
                         </li>
                         <li>
-                            <div class="title">Время работы:</div>
-                            <p>понедельник — пятница: <span>с 9:00 до 19:00</span> <br>суббота: <span>с 10:00 до 17:00</span> <br>воскресенье: <span>выходной</span></p>
+                            <? $APPLICATION->IncludeComponent("bitrix:main.include", "", [
+                                "AREA_FILE_SHOW" => "file",
+                                "PATH"           => SITE_TEMPLATE_PATH . "/includes/footer/footer_timework.php",
+                            ]); ?>
                         </li>
                         <li>
-                            <div class="title">Общий номер:</div>
-                            <p>+375 (17) 269 31 22 <br>trals@trals.by</p>
+                            <? $APPLICATION->IncludeComponent("bitrix:main.include", "", [
+                                "AREA_FILE_SHOW" => "file",
+                                "PATH"           => SITE_TEMPLATE_PATH . "/includes/footer/footer_number.php",
+                            ]); ?>
                         </li>
                     </ul>
                 </div>
