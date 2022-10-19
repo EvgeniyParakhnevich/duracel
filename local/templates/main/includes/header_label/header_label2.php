@@ -1,0 +1,1 @@
+<div class="header__contact__label">Отдел герметичных <br>аккумуляторов:</div>
